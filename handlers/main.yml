@@ -1,0 +1,7 @@
+---
+
+- name: restart postfix
+  service: name=postfix state=restarted
+
+- name: update smtp_relay_credentials
+  shell: postmap /etc/postfix/smtp_relay_credentials
